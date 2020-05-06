@@ -8,6 +8,12 @@
   </a>
 </p>
 
+<a href="https://github.com/duckino/yanyu/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/duckino/yanyu"></a>
+<img alt="npm" src="https://img.shields.io/npm/dw/yanyu?color=red&label=npm%20download">
+<a href="https://github.com/duckino/yanyu/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/duckino/yanyu"></a>
+
+![](https://github.com/duckino/yanyu/workflows/npm-test/badge.svg)
+
 ## Overview
 
 Yanyu is a high speed Chinese Text-to-Speech JavaScript library for Node.js. It aims to generate audio files based on Chinese characters. It will support other languages and even recognition in the future. 
