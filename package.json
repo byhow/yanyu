@@ -1,0 +1,54 @@
+{
+  "name": "yanyu",
+  "version": "0.0.1-beta",
+  "description": "A Chinese speech sythesis and recognition library for nodejs, aimimng at high efficiency real time voice casting.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json && npm run clean",
+    "start": "node ./index.js",
+    "build": "tsc",
+    "prepublishOnly": "npm test && npm run build",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "preversion" : "npm run lint",
+    "clean": "rm -rf ./*.mp3",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdvr/yanjs.git"
+  },
+  "keywords": [
+    "speech",
+    "recognition",
+    "sythesis",
+    "npm",
+    "node",
+    "Chinese"
+  ],
+  "author": "duckino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdvr/yanjs/issues"
+  },
+  "homepage": "https://github.com/cdvr/yanjs#readme",
+  "dependencies": {
+    "@types/audiosprite": "^0.6.0",
+    "@types/node": "^13.9.5",
+    "pinyin": "^2.9.0",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/pinyin": "^2.8.1",
+    "audiosprite": "^0.7.2",
+    "jest": "^25.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.4.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0"
+  }
+}
