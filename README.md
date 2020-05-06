@@ -10,9 +10,7 @@
 
 <a href="https://github.com/duckino/yanyu/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/duckino/yanyu"></a>
 <img alt="npm" src="https://img.shields.io/npm/dw/yanyu?color=red&label=npm%20download">
-<a href="https://github.com/duckino/yanyu/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/duckino/yanyu"></a>
-
-![](https://github.com/duckino/yanyu/workflows/npm-test/badge.svg)
+<a href="https://github.com/duckino/yanyu/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/duckino/yanyu"></a> ![](https://github.com/duckino/yanyu/workflows/npm-test/badge.svg)
 
 ## Overview
 
