@@ -32,5 +32,5 @@ test('long translation time', () => {
         飄落後才發現 這幸福的碎片 \
         要我怎麼撿", "pinyin-syllables")).not.toBeNull();
     const end = Date.now();
-    expect(end-start).toBeLessThan(35);
+    expect(end-start).toBeLessThan(40);
 });
