@@ -1,7 +1,7 @@
 {
-  "name": "yanyu",
+  "name": "@duckino/yanyu",
   "version": "0.0.2-beta",
-  "description": "A Chinese speech sythesis and recognition library for nodejs, aimimng at high efficiency real time voice casting.",
+  "description": "A Chinese speech synthesis and recognition library for nodejs, aiming at high efficiency real time voice casting.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,14 +17,11 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cdvr/yanjs.git"
-  },
+  "repository": "https://github.com/duckino/yanyu",
   "keywords": [
     "speech",
     "recognition",
-    "sythesis",
+    "synthesis",
     "npm",
     "node",
     "Chinese"
@@ -50,6 +47,5 @@
     "ts-jest": "^25.5.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
