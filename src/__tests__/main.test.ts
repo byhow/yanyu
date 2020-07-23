@@ -7,7 +7,7 @@ test('short translation time', () => {
     expect(yan.synthesis("日暮乡关何处是 烟波江上使人愁", "pinyin-syllables")).not.toBeNull();
     const end = Date.now();
     console.log(end - start);
-    expect(end-start).toBeLessThan(20);
+    expect(end-start).toBeLessThan(30);
 });
 
 
