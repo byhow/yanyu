@@ -12,6 +12,10 @@ jobs:
       - uses: actions/setup-node@v1
         with: 
           node-version: 13
+      - name: install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install ffmpeg
       - run: npm ci
       - run: npm test
       - run: npm run build
