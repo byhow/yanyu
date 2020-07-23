@@ -12,10 +12,10 @@
     "prepare": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "preversion" : "npm run lint",
+    "preversion": "npm run lint",
     "clean": "rm -rf ./*.mp3",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -37,17 +37,17 @@
   "homepage": "https://github.com/cdvr/yanjs#readme",
   "dependencies": {
     "@types/audiosprite": "^0.6.0",
-    "@types/node": "^13.9.5",
-    "pinyin": "^2.9.0",
-    "typescript": "^3.8.3"
+    "@types/node": "^13.13.14",
+    "pinyin": "^2.9.1",
+    "typescript": "^3.9.7"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.4",
+    "@types/jest": "^25.2.3",
     "@types/pinyin": "^2.8.1",
     "audiosprite": "^0.7.2",
-    "jest": "^25.1.0",
+    "jest": "^25.5.4",
     "prettier": "^2.0.5",
-    "ts-jest": "^25.4.0",
+    "ts-jest": "^25.5.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0"
   }
