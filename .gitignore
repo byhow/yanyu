@@ -106,3 +106,10 @@ dist
 
 # MacOS
 .DS_Store
+
+# IDE
+.vscode/
+.vscode/settings.json
+secretnotes.md
+imports/lib/
+public/fonts/
