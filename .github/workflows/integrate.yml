@@ -1,22 +1,22 @@
 name: Node Continuous Integration
 
-on: 
+on:
   pull_request:
-    branches: [ master, dev ]
-  
+    branches: [master, dev]
+
 jobs:
   test_pull_request:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 13.x]
+        node-version: [12.x, 14.x, 16.x]
 
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
-        with: 
+        with:
           node-version: ${{ matrix.node-version }}
       - name: install ffmpeg
         run: |

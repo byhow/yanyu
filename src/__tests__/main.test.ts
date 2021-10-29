@@ -4,17 +4,18 @@ import { Yan } from '../../dist/index';
 test('short translation time', () => {
     const yan = new Yan();
     const start = Date.now();
-    expect(yan.synthesis("日暮乡关何处是 烟波江上使人愁", "pinyin-syllables")).not.toBeNull();
+    expect(yan.synthesis('日暮乡关何处是 烟波江上使人愁', 'pinyin-syllables')).not.toBeNull();
     const end = Date.now();
     console.log(end - start);
-    expect(end-start).toBeLessThan(30);
+    expect(end - start).toBeLessThan(30);
 });
-
 
 test('long translation time', () => {
     const yan = new Yan();
     const start = Date.now();
-    expect(yan.synthesis("冷咖啡離開了杯墊 \
+    expect(
+        yan.synthesis(
+            '冷咖啡離開了杯墊 \
         我忍住的情緒在很後面 \
         拼命想挽回的從前 \
         在我臉上依舊清晰可見 \
@@ -30,7 +31,10 @@ test('long translation time', () => {
         或許命運的籤 讓我們遇見 \
         只讓我們相戀 這一季的秋天 \
         飄落後才發現 這幸福的碎片 \
-        要我怎麼撿", "pinyin-syllables")).not.toBeNull();
+        要我怎麼撿',
+            'pinyin-syllables',
+        ),
+    ).not.toBeNull();
     const end = Date.now();
-    expect(end-start).toBeLessThan(60);
+    expect(end - start).toBeLessThan(60);
 });

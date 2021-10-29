@@ -1,6 +1,6 @@
 {
   "name": "yanyu",
-  "version": "0.0.3-beta",
+  "version": "0.1.0",
   "description": "A Chinese speech synthesis and recognition library for nodejs, aiming at high efficiency real time voice casting.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,7 +17,7 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "repository": "https://github.com/duckino/yanyu",
+  "repository": "https://github.com/byhow/yanyu",
   "keywords": [
     "speech",
     "recognition",
@@ -26,12 +26,12 @@
     "node",
     "Chinese"
   ],
-  "author": "duckino",
+  "author": "byhow",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/duckino/yanyu/issues"
+    "url": "https://github.com/byhow/yanyu/issues"
   },
-  "homepage": "https://github.com/duckino/yanyu#readme",
+  "homepage": "https://github.com/byhow/yanyu#readme",
   "dependencies": {
     "@types/audiosprite": "^0.6.1",
     "@types/node": "^16.11.1",

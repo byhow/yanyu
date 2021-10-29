@@ -8,45 +8,47 @@
   </a>
 </p>
 
-<a href="https://github.com/duckino/yanyu/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/duckino/yanyu"></a>
+<a href="https://github.com/byhow/yanyu/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/byhow/yanyu"></a>
 <img alt="npm" src="https://img.shields.io/npm/dw/yanyu?color=red&label=npm%20download">
-<a href="https://github.com/duckino/yanyu/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/duckino/yanyu"></a> ![](https://github.com/duckino/yanyu/workflows/npm-test/badge.svg)
+<a href="https://github.com/byhow/yanyu/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/byhow/yanyu"></a> ![](https://github.com/byhow/yanyu/workflows/npm-test/badge.svg)
 
 ## Overview
 
-Yanyu is a high speed Chinese Text-to-Speech JavaScript library for Node.js. It aims to generate audio files based on Chinese characters. Recognition and support for other languages is planned in the future. 
-
+Yanyu is a high speed Chinese Text-to-Speech JavaScript library for Node.js. It aims to generate audio files based on Chinese characters. Recognition and support for other languages is planned in the future.
 
 ## Installation
 
 ### NPM
+
 Run the following command:
 
 ```bash
 npm install yanyu
 ```
 
-
 ## QuickStart
-Call the ```systhesis()``` function to convert Chinese string to mp3 files.
+
+Call the `systhesis()` function to convert Chinese string to mp3 files.
 
 ```js
 import yan from 'yanyu';
 
 const yan = new Yan();
-yan.synthesis("你好", "pinyin-syllables"); 
+yan.synthesis('你好', 'pinyin-syllables');
 ```
 
+Requirements:
 
-Requirements: 
-* Node v10+
+- Node v12+
 
 ## Test
+
 ```bash
 npm test
 ```
 
 ## Code of Conduct
+
 [**Code of Conduct**](./CODE-OF-CONDUCT.md).
 
 ## License
