@@ -41,7 +41,7 @@ Requirements:
 ## Test
 
 ```bash
-pnpm test
+# pnpm test - disabled for now
 ```
 
 ## Code of Conduct
