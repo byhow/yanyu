@@ -14,16 +14,13 @@
 
 ## Overview
 
-Yanyu is a high speed Chinese Text-to-Speech JavaScript library for Node.js. It aims to generate audio files based on Chinese characters. Recognition and support for other languages is planned in the future.
+Yanyu is a high speed Chinese Text-to-Speech server-side library for Node.js. It aims to generate audio files based on Chinese characters. Recognition and support for other languages is planned in the future.
 
 ## Installation
-
-### NPM
-
 Run the following command:
 
 ```bash
-npm install yanyu
+pnpm i -D yanyu
 ```
 
 ## QuickStart
@@ -39,12 +36,12 @@ yan.synthesis('你好', 'pinyin-syllables');
 
 Requirements:
 
-- Node v12+
+- Node v14+
 
 ## Test
 
 ```bash
-npm test
+pnpm test
 ```
 
 ## Code of Conduct

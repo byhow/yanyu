@@ -1,16 +1,29 @@
-import Py from 'pinyin';
+import Py = require('pinyin');
 import crypto from 'crypto';
-import audiospirite from 'audiosprite';
+import audiospirite = require('audiosprite');
 
 export class Yan {
-    // TODO: add to set different modes
-    // default to tone2
-    _convert(hans: string, options?: number) {
+
+    /**
+     * convert through the pinyin library
+     * TODO: add to set different modes, default to tone2
+     * 
+     * @param {String} hans 
+     * @param {Number} options
+     * @returns {String[][]}
+     */
+    private convert(hans: string, options?: number): string[][] {
         const pyStyle = options ? options : Py.STYLE_TONE2;
         return Py(hans, { style: pyStyle });
     }
 
-    _concat_audio_mp3(fileArr: string[]) {
+    /**
+     * concat audio with autospirite
+     * 
+     * @param {String[]} fileArr 
+     * @returns {String}
+     */
+    private concat_audio_mp3(fileArr: string[]): string {
         const fileId = crypto.randomBytes(7).toString('hex');
         const opts = {
             export: 'mp3',
@@ -18,17 +31,20 @@ export class Yan {
             gap: 0,
             ignorerounding: 1,
         };
-        audiospirite(fileArr, opts, (err, obj) => {
+        // TODO: to not to use audiospirite
+        audiospirite(fileArr, opts, (err, _) => {
             if (err) {
-                // console.error(err);
                 return err.message;
             }
+            // TODO: refactor out the default return
+            return '';
         });
         return opts.output;
     }
 
-    synthesis(hans: string, path: string, options?: number) {
-        const pyArr: string[][] = this._convert(hans, options);
+    synthesis(hans: string, path: string, options?: number): string {
+        const pyArr: string[][] = this.convert(hans, options);
+        // TODO: compress the audio library
         const dirPath = pyArr.map((elem) => {
             if (elem[0] && elem[0].trim()) {
                 return `./${path}/${elem[0]}.mp3`;
@@ -36,11 +52,10 @@ export class Yan {
                 return `./${path}/1000.mp3`;
             }
         });
-
-        return this._concat_audio_mp3(dirPath);
+        return this.concat_audio_mp3(dirPath);
     }
 
-    recognition() {
+    recognition(): void {
         return;
     }
 }
