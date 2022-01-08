@@ -1,3 +1,4 @@
+test('test is disabled', () => { console.debug('tested'); });
 // import { Yan } from '../../dist/index';
 
 // // TODO: some how async, change to sync

@@ -13,8 +13,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,
+    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap" : true,
   },
   "include": ["src"]
 }

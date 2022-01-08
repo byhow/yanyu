@@ -2,22 +2,25 @@
   "name": "yanyu",
   "version": "0.1.1",
   "description": "A Chinese speech synthesis and recognition library toolkit",
+  "main": "lib/index",
+  "types": "lib/index",
   "scripts": {
-    "test": "jest --config jestconfig.json && pnpm clean",
-    "start": "node ./index.js",
-    "build": "tsc",
-    "prepublishOnly": "pnpm test && pnpm build",
-    "prepare": "pnpm build",
+    "start": "pnpm build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts",
+    "test": "jest && pnpm clean:audio",
+    "prepublishOnly": "pnpm build && pnpm test",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "clean": "rm -rf ./*.mp3",
-    "version": "pnpm run format && git add -A src",
+    "clean": "rm -rf ./node_modules ./dist",
+    "clean:audio": "rm -rf ./*.mp3",
+    "version": "pnpm format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": "https://github.com/byhow/yanyu",
   "keywords": [
     "speech",
     "synthesis",
-    "Chinese"
+    "pinyin"
   ],
   "author": "byhow",
   "license": "MIT",
