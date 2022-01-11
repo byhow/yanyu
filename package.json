@@ -2,15 +2,15 @@
   "name": "yanyu",
   "version": "0.1.1",
   "description": "A Chinese speech synthesis and recognition library toolkit",
-  "main": "lib/index",
-  "types": "lib/index",
+  "main": "dist/index",
+  "types": "dist/index",
   "scripts": {
     "start": "pnpm build:live",
     "build": "tsc -p .",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts",
     "test": "jest && pnpm clean:audio",
     "prepublishOnly": "pnpm build && pnpm test",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.{js,ts}\"",
     "clean": "rm -rf ./node_modules ./dist",
     "clean:audio": "rm -rf ./*.mp3",
     "version": "pnpm format && git add -A src",
@@ -29,18 +29,32 @@
   },
   "homepage": "https://github.com/byhow/yanyu#readme",
   "devDependencies": {
-    "pinyin": "^2.10.2",
-    "vite": "^2.7.10",
-    "vitest": "^0.0.136",
-    "jest": "^27.4.7",
-    "@types/jest": "27.4.0",
-    "typescript": "^4.5.4",
     "@types/audiosprite": "^0.6.1",
+    "@types/jest": "27.4.0",
     "@types/node": "^17.0.8",
-    "eslint": "^8.6.0",
     "@types/pinyin": "^2.10.0",
     "audiosprite": "^0.7.2",
+    "eslint": "^8.6.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.1.7",
+    "pinyin": "^2.10.2",
     "prettier": "^2.5.1",
-    "tslint-config-prettier": "^1.18.0"
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.10",
+    "vitest": "^0.0.136"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+        "prettier --write",
+        "eslint --fix src/",
+        "git add"
+    ]
   }
 }
