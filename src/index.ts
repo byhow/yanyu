@@ -40,7 +40,13 @@ export class Yan {
     });
     return opts.output;
   }
-
+  /**
+   * generate an audio file of the input characters
+   * @param {String} hans - the words/sentences
+   * @param {String} path - output path
+   * @param {Number | null} options - for Py lib
+   * @returns {String}
+   */
   synthesis(hans: string, path: string, options?: number): string {
     const pyArr: string[][] = this.convert(hans, options);
     // TODO: compress the audio library
