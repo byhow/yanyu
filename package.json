@@ -11,6 +11,8 @@
     "test": "jest && pnpm clean:audio",
     "prepublishOnly": "pnpm build && pnpm test",
     "format": "prettier --write \"src/**/*.{js,ts}\"",
+    "lint": "eslint . && pnpm lint:language",
+    "lint:language": "alex .",
     "clean": "rm -rf ./node_modules ./dist",
     "clean:audio": "rm -rf ./*.mp3",
     "version": "pnpm format && git add -A src",
@@ -42,8 +44,13 @@
     "prettier": "^2.5.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.5.4",
-    "vite": "^2.7.10",
-    "vitest": "^0.0.136"
+    "alex": "10.0.0",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "eslint-config-standard": "latest",
+    "eslint-plugin-import": "^2.25.2",
+    "@typescript-eslint/parser": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-promise": "latest"
   },
   "husky": {
     "hooks": {

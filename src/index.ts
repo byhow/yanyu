@@ -2,7 +2,7 @@ import Py = require('pinyin');
 import crypto from 'crypto';
 import audiospirite = require('audiosprite');
 
-export class Yan {
+export default class Yan {
   /**
    * convert through the pinyin library
    * TODO: add to set different modes, default to tone2
@@ -12,7 +12,7 @@ export class Yan {
    * @returns {String[][]}
    */
   private convert(hans: string, options?: number): string[][] {
-    const pyStyle = options ? options : Py.STYLE_TONE2;
+    const pyStyle = options || Py.STYLE_TONE2;
     return Py(hans, { style: pyStyle });
   }
 
@@ -40,6 +40,7 @@ export class Yan {
     });
     return opts.output;
   }
+
   /**
    * generate an audio file of the input characters
    * @param {String} hans - the words/sentences
@@ -53,14 +54,12 @@ export class Yan {
     const dirPath = pyArr.map((elem) => {
       if (elem[0] && elem[0].trim()) {
         return `./${path}/${elem[0]}.mp3`;
-      } else {
-        return `./${path}/1000.mp3`;
       }
+      return `./${path}/1000.mp3`;
     });
     return this.concat_audio_mp3(dirPath);
   }
 
   recognition(): void {
-    return;
   }
 }

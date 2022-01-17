@@ -34,6 +34,6 @@ jobs:
       
       - run: pnpm install --frozen-lockfile
       - run: pnpm build --if-present
-      # - run: pnpm test
+      - run: pnpm lint
         env:
           CI: true
