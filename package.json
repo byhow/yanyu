@@ -15,8 +15,8 @@
     "lint:language": "alex .",
     "clean": "rm -rf ./node_modules ./dist",
     "clean:audio": "rm -rf ./*.mp3",
-    "version": "pnpm format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin main && pnpm publish"
   },
   "repository": "https://github.com/byhow/yanyu",
   "keywords": [
@@ -36,6 +36,7 @@
     "@types/node": "^17.0.8",
     "@types/pinyin": "^2.10.0",
     "audiosprite": "^0.7.2",
+    "standard-version": "^9.3.2",
     "eslint": "^8.6.0",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
