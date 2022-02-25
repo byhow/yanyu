@@ -1,6 +1,6 @@
-import Py = require('pinyin');
-import crypto from 'crypto';
-import audiospirite = require('audiosprite');
+import pinyin from 'pinyin';
+import { randomBytes } from 'crypto';
+import audiospirite from 'audiosprite';
 
 export default class Yan {
   /**
@@ -12,32 +12,29 @@ export default class Yan {
    * @returns {String[][]}
    */
   private convert(hans: string, options?: number): string[][] {
-    const pyStyle = options || Py.STYLE_TONE2;
-    return Py(hans, { style: pyStyle });
+    const pyStyle = options || pinyin.STYLE_TONE2;
+    return pinyin(hans, { style: pyStyle });
   }
 
   /**
-   * concat audio with autospirite
+   * concat audio files
    *
    * @param {String[]} fileArr
    * @returns {String}
    */
-  private concat_audio_mp3(fileArr: string[]): string {
-    const fileId = crypto.randomBytes(7).toString('hex');
+  private concatAudioMp3(fileArr: string[]): string {
     const opts = {
       export: 'mp3',
-      output: `${fileId}.mp3`,
+      output: `${randomBytes(7).toString('hex')}.mp3`,
       gap: 0,
       ignorerounding: 1,
     };
-    // TODO: to not to use audiospirite
-    audiospirite(fileArr, opts, (err, _) => {
-      if (err) {
-        return err.message;
-      }
-      // TODO: refactor out the default return
-      return '';
+
+    audiospirite(fileArr, opts, (err, obj) => {
+      if (err) return console.error(err);
+      console.info(JSON.stringify(obj, null, 2))
     });
+
     return opts.output;
   }
 
@@ -49,17 +46,18 @@ export default class Yan {
    * @returns {String}
    */
   synthesis(hans: string, path: string, options?: number): string {
-    const pyArr: string[][] = this.convert(hans, options);
+    const pyArr = this.convert(hans, options);
     // TODO: compress the audio library
     const dirPath = pyArr.map((elem) => {
-      if (elem[0] && elem[0].trim()) {
+      if (elem[0]?.trim()) {
         return `./${path}/${elem[0]}.mp3`;
       }
       return `./${path}/1000.mp3`;
     });
-    return this.concat_audio_mp3(dirPath);
+    return this.concatAudioMp3(dirPath);
   }
 
   recognition(): void {
+    console.error(`Not implemented`)
   }
 }
