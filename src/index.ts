@@ -45,7 +45,7 @@ export default class Yan {
    * @param {Number | null} options - for Py lib
    * @returns {String}
    */
-  synthesis(hans: string, path: string, options?: number): string {
+  synthesis(hans: string, path: string = 'pinyin-syllables', options?: number): string {
     const pyArr = this.convert(hans, options);
     // TODO: compress the audio library
     const dirPath = pyArr.map((elem) => {
