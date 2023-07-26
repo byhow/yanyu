@@ -35,7 +35,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install ffmpeg
 
-      - run: pnpm build --if-present
+      - run: pnpm build
       - run: pnpm lint
         env:
           CI: true
