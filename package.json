@@ -33,7 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@types/audiosprite": "^0.6.1",
+    "@types/audiosprite": "^0.7.0",
     "@types/jest": "29.5.3",
     "@types/node": "^20.4.5",
     "@types/pinyin": "^2.10.0",

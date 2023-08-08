@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^17.0.0
     version: 17.0.0
   '@types/audiosprite':
-    specifier: ^0.6.1
-    version: 0.6.1
+    specifier: ^0.7.0
+    version: 0.7.0
   '@types/jest':
     specifier: 29.5.3
     version: 29.5.3
@@ -1078,8 +1078,8 @@ packages:
       '@types/estree': 1.0.1
     dev: true
 
-  /@types/audiosprite@0.6.1:
-    resolution: {integrity: sha512-Qv+Oq9jp43eyI7ULyeYpygha9mWI2ZO8EzXNUW/ZH6ayzE6RM5qHKw1wkvteXo3OjM1M6n+CVgqC65w7plEMqQ==}
+  /@types/audiosprite@0.7.0:
+    resolution: {integrity: sha512-UF2dyksgNqO9dq0tBZ5HrLdHXUoNSrRdIz6+tPGCnqT+pP8FyuLgai1gtIOh6OY17vySEqzEMYTCl1RBdkuZIw==}
     dev: true
 
   /@types/babel__core@7.20.1:
