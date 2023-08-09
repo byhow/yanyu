@@ -27,7 +27,7 @@ export default class Yan {
       export: 'mp3',
       output: `${randomBytes(7).toString('hex')}.mp3`,
       gap: 0,
-      ignorerounding: 1,
+      ignorerounding: true,
     };
 
     audiospirite(fileArr, opts, (err, obj) => {
