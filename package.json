@@ -39,7 +39,7 @@
     "@types/pinyin": "^2.10.0",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "alex": "11.0.0",
+    "alex": "11.0.1",
     "audiosprite": "^0.7.2",
     "eslint": "^8.46.0",
     "husky": "^8.0.3",
