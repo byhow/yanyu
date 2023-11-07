@@ -34,7 +34,7 @@
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
     "@types/audiosprite": "^0.7.1",
-    "@types/jest": "29.5.7",
+    "@types/jest": "29.5.8",
     "@types/node": "^20.8.2",
     "@types/pinyin": "^2.10.0",
     "@typescript-eslint/eslint-plugin": "latest",
