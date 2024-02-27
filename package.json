@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/byhow/yanyu#readme",
   "devDependencies": {
-    "@commitlint/cli": "^18.6.0",
-    "@commitlint/config-conventional": "^18.6.0",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
     "@types/audiosprite": "^0.7.3",
     "@types/jest": "29.5.12",
     "@types/node": "^20.11.16",
