@@ -39,7 +39,7 @@ yan.synthesis('你好', 'pinyin-syllables');
 
 Requirements:
 
-- Node LTS and beyond (20.x and above)
+- Node.js LTS and beyond (20.x and above)
 
 ## Test
 
