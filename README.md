@@ -1,6 +1,4 @@
-<h1>
-  Yanyu.js
-</h1>
+# Yanyu.js
 
 <p>
   <a href="https://zh.m.wiktionary.org/zh/%E8%A8%80">
@@ -13,18 +11,23 @@
 <a href="https://github.com/byhow/yanyu/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/byhow/yanyu"></a> ![](https://github.com/byhow/yanyu/workflows/npm-test/badge.svg)
 
 ## Overview
+
 <!--alex ignore chinese-->
+
 Yanyu is a high speed Chinese Text-to-Speech server-side library for Node.js. It aims to generate audio files based on Chinese characters. Recognition and support for other languages is planned in the future.
 
 ## Installation
+
 Run the following command:
 
 ```bash
-pnpm i -D yanyu
+pnpm i yanyu
 ```
 
 ## QuickStart
+
 <!--alex ignore chinese-->
+
 Call the `systhesis()` function to convert Chinese characters to mp3 files.
 
 ```js
